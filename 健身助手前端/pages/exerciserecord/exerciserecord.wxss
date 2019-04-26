@@ -1,0 +1,65 @@
+
+.exerciserecord_container {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.exercise_info {
+  height: 310rpx;
+  background-color: #fff;
+  margin: 20rpx;
+}
+.exercise_text {
+  height: 100rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #584F60;
+}
+.exercise_context {
+  text-align: center;
+  color: #24c68a;
+  font-size: 1.6rem;
+  font-weight: bold;
+  height: 150rpx;
+  
+}
+
+.exercise_today_text{
+  margin-left: 20rpx;
+  margin-top: 100rpx;
+  height: 100rpx;
+}
+
+.exercise_today_cotext {
+  margin-left: 20rpx;
+  margin-top: 100rpx;
+  height: 100rpx;
+   color: #24c68a;
+}
+
+.exercisedetail_info {
+  width: 100%;
+  margin: 20rpx;
+  background-color: #fff;
+  height: 150rpx;
+}
+
+.detail_time {
+  height: 80rpx;
+}
+
+.detail_name {
+  width: 150rpx;
+  margin-top: 30rpx;
+}
+.detail_count {
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+
+
+
+

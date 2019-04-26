@@ -1,0 +1,21 @@
+<!-- 获取金币的记录 -->
+
+<view class='coinrecord_container'>
+  <view class='coin_info'>
+    <view class='coin_text'>运动币</view>
+    <view class='coin_context'>{{totalCoin}}</view>
+    <view>
+      <text class='coin_today_text'>今日</text>
+      <text class='coin_today_cotext'>{{todayCoin}}</text>
+    </view>
+  </view>
+  <block wx:for='{{coinRecordList}}'>
+    <view class='coindetail_info'>
+    <view class='detail_time'>{{item.date}}</view>
+    <view>
+      <text class='detail_name'>{{item.beizhu}} </text>
+      <text class='detail_coin'> {{item.coin}}</text>
+    </view>
+  </view>
+  </block>
+</view>

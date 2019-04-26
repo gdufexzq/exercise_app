@@ -1,0 +1,85 @@
+<!-- 社区首页 -->
+<wxs module="getImageArr">
+  var getImageArr = function(images) {
+    var arr = images.split(",");
+    return arr;
+  }
+  var formatDate = function(s) {
+  console.log("s:" + s);
+    var date = getDate(s);
+    console.log(date);
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var day = date.getDate()
+    var hour = date.getHours()
+    var minute = date.getMinutes()
+    var curday = year + "-" + month + "-" + day + " " + hour + ":" + minute
+    console.log("cur" + curday);
+    return curday;
+  }
+
+  module.exports.getImageArr = getImageArr;
+  module.exports.formatDate = formatDate;
+</wxs>
+<view class="container">
+  <view class='content_head'>
+    <view class='content_xianshi'>
+      <view class='all' bindtap='bindAllContext'>
+      <image src='{{allImage}}'></image>
+      </view>
+      <view class='one' bindtap='bindMyContext'>
+      <image src='{{oneImage}}'></image>
+      </view>
+    </view>
+    <image bindtap='bindPublish' class='publish_img' src='../../resources/images/Ic_Content_Publish.png'></image>
+  </view>
+  <scroll-view bindscrolltolower='bindPageContent'>
+    <block wx:for='{{contentList}}' wx:key='{{index}}' wx:for-index="contentListIndex">
+      <view class='community_item'>
+        <view class='user_info'>
+          <image src='{{item[0].userImage}}'></image>
+          <view class='user_info_detail'>
+          <view><text>{{item[0].userName}}</text></view>
+          <view><text>{{getImageArr.formatDate(item[0].createTime)}}</text></view>
+          </view>
+          
+        </view>
+        <view class='community_item_context'>
+          <text>{{item[0].contentContext}}</text>
+        </view>
+        <view>
+          <block wx:for='{{getImageArr.getImageArr(item[0].contentImage)}}'>
+            <image data-index='{{contentListIndex}}' data-url='{{index}}' bindtap='bindPreviewImage' class='community_item_img' src='{{item}}'></image>
+          </block>
+        </view>
+
+        <view class='community_item_user'>
+          <image data-index='{{contentListIndex}}' bindtap='bindPraise' class='community_item_tubiao' src='{{item[0].praiseIcon}}'></image>
+          <text class='community_item_shuliang'>{{item[0].praiseData}}</text>
+          <image data-index='{{contentListIndex}}' bindtap='bindContent' class='community_item_content' src='../../resources/images/Ic_Content_Content.png'></image>
+        </view>
+        <view class='content_text'>
+        <block wx:for='{{item[1]}}'>
+            <view>
+            <text>{{item.userName}}: </text>
+            <text>{{item.commentContent}}</text>
+            </view>
+        </block>
+          <view wx:if='{{item[1].length < 1}}'>
+          <text>暂无评论</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+  <view>已经没有更多动态了</view>
+
+  <!-- 评论框 -->
+<view class='comment_model' wx:if="{{inputShow}}" catchtap='disibleComment' catchtouchmove="noOption">
+<view class='input-box' style='bottom:{{height}}px;' catchtap='noOption'>
+<textarea class="content_comment" type="text" placeholder="评论内容" placeholder-class='comment_placeholder' show-confirm-bar="{{false}}" auto-height="{{true}}" adjust-position='{{false}}' auto-focus="{{true}}" focus='{{true}}' bindblur="bindblur" bindinput="bindinput" maxlength='100'>
+</textarea>
+<text class='send' bindtap='bindSendcomment'>发送</text>
+</view>
+</view>
+</view>

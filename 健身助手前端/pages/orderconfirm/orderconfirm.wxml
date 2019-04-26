@@ -1,0 +1,43 @@
+<!--pages/orderconfirm/orderconfirm.wxml-->
+<!-- 订单确认界面 -->
+<view class='container'>
+
+  <navigator url='../addresslist/addresslist'>
+    <view class='shouhuo'>
+      <view wx:if='{{!addressInfo}}'>请填写收货信息 ></view>
+      <view class='address_item' wx:if='{{addressInfo}}'>
+        <view class='address_name'>
+          <text>收件人: {{addressInfo.userName}}</text>
+        </view>
+        <view class='address_phone'>
+          <text>电话: {{addressInfo.userPhone}}</text>
+        </view>
+        <view class='address_address'>
+          <text>收货地址：{{addressInfo.userProvinceCityCounty}}
+        {{addressInfo.userDetailAddress}}</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+  <!-- <view class='youhui'>优惠 ></view> -->
+  <view class='image_view'>
+    <block wx:for='{{productImages}}'>
+      <image src='{{item}}'></image>
+    </block>
+    <view bindtap='productOrderDetail'>共{{totalCount}}件 ></view>
+  </view>
+  <view class='pay_info'>
+    <view class='shiji_pay'>实际支付 ￥{{totalPrice}}</view>
+    <!-- <view class='daofu'><view class='daofu_view'>货到付款 <image class='daofu_pay_image' src='../../resources/images/Ic_Goodcar_Normal.png'></image></view></view> -->
+    <view class='weixin_pay'>
+      <view class='weinxi_pay_view'>本商品由运动币支付
+        <!-- <image class='weixin_pay_image' src='../../resources/images/Ic_Goodcar_Normal.png'></image> -->
+      </view>
+    </view>
+    <view class='total_pay_view'>
+      <view class='total_pay'>总计 ￥{{totalPrice}}</view>
+      <view class='confirm' bindtap='confirm_submit'>确认提交</view>
+    </view>
+  </view>
+
+</view>

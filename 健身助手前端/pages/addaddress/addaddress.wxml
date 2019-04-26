@@ -1,0 +1,64 @@
+<!--pages/addaddress/addaddress.wxml-->
+<!-- 新增收货地址 -->
+<view class='container'>
+  <form bindsubmit='bindsave'>
+    <view class='address_name'>
+      <text>收货人</text>
+      <input placeholder='收件人姓名' name='addressName'></input>
+    </view>
+    <view class='address_phone'>
+      <text>手机号</text>
+      <input placeholder='请填写收件人手机号' name='addressPhone'></input>
+    </view>
+    <view class="animation-button address_address" bindtap="translate">
+      <text>收货地址</text>
+      <input bindtap='bindaddress' placeholder='请选择省/市/区 >' value='{{shouhuo_address}}' name='addressPCC'></input>
+    </view>
+
+    <view class='address_xianxi'>
+      <textarea fixed="true" placeholder='请输入详细的地址信息(街道,楼牌号等)' name='addressDetail'></textarea>
+    </view>
+
+    <view class='address_save'>
+      <view class='address_save_parent'>
+        <button class='primary' form-type='submit'>
+  保存
+ </button>
+      </view>
+    </view>
+  </form>
+
+
+</view>
+<view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView" data-id="444">
+  <view class="animation-element" catchtap="nono">
+    <view>
+      <text class="left-bt" catchtap="hiddenFloatView_cancle" data-id="555">取消</text>
+    </view>
+    <view>
+      <text class="right-bt" catchtap="hiddenFloatView_confirm" data-id="666">确定</text>
+    </view>
+    <view class="line"></view>
+
+    <picker-view indicator-style="height: 50rpx;" value="{{value}}" bindchange="bindChange" catchtap="nono">
+      <!--省-->
+      <picker-view-column>
+        <view wx:for="{{provinces}}" wx:for-item="sheng" wx:key="">
+          {{sheng.name}}
+        </view>
+      </picker-view-column>
+      <!--地级市-->
+      <picker-view-column>
+        <view wx:for="{{citys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+      <!--区县-->
+      <picker-view-column>
+        <view wx:for="{{countys}}" wx:key="">
+          {{item.name}}
+        </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

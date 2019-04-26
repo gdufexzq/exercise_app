@@ -1,0 +1,50 @@
+/* pages/exercisedetaillist/exercisedetaillist.wxss */
+.container {
+ /* position: relative; */
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.course_item {
+  display: inline-block;
+  /* position: relative; */
+  /* float: left; */
+  /* justify-content: center;
+  align-items: center; */
+
+ 
+  background-repeat:no-repeat; 
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+  width: 50%;
+  height: 300rpx;
+  border-bottom: 2rpx solid #bfc2c7;
+  margin: 20rpx auto;
+  /* padding-bottom: 50rpx; */
+}
+.course_item view {
+  display: block;
+  width: 100%;
+}
+.title {
+  text-align: center;
+  width: 100%;
+  margin-top: 80rpx;
+  font-size: 1.4rem;
+  color: #fefefe;
+  /* margin: 50rpx; */
+  /* padding: 50rpx; */
+  /* top: 30rpx; */
+  /* left: 100rpx; */
+}
+.count {
+ text-align: center;
+  width: 100%;
+  margin-top: 30rpx;
+  font-size: 1.2rem;
+  color: #fefefe;
+  /* margin: 50rpx; */
+  /* padding: 50rpx; */
+  /* left: 100rpx; */
+  /* top: 300rpx; */
+}

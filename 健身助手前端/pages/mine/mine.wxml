@@ -1,0 +1,63 @@
+<!-- 个人中心 -->
+<view class='container'>
+  <view class='head_image'>
+    <image src='{{info.headImg}}'></image>
+    <text>{{info.username}}</text>
+  </view>
+  <view class='info'>
+    <view>
+      <text>{{exerciseCoin}}</text>
+      <text>运动币</text>
+    </view>
+    <text class='text_center'>|</text>
+    <view>
+      <text>{{exerciseCount}}</text>
+      <text>总健身(次数)</text>
+    </view>
+    <!-- <text class='text_center'>|</text>
+    <view bindtap='bindMedal'>
+      <text>{{info.record}}</text>
+      <text>已得勋章(个)</text>
+    </view> -->
+  </view>
+  <view class='nav'>
+    <view bindtap='bindData'>
+      <image src='../../resources/images/Ic_Mine_Data.png'></image>
+      <view class='text'>
+        <text>我的数据</text>
+        <text class='skip'>></text>
+      </view>
+    </view>
+    <view bindtap='bindCourse'>
+      <image src='../../resources/images/Ic_Mine_Course.png'></image>
+      <view class='text'>
+        <text>我的课程</text>
+        <text class='skip'>></text>
+      </view>
+    </view>
+
+    <!-- <view bindtap='bindActivity'>
+      <image src='../../resources/images/Ic_Mine_Activity.png'></image>
+      <view class='text'>
+        <text>我的活动</text>
+        <text class='skip'>></text>
+      </view>
+    </view> -->
+
+    <view bindtap="bindOrder">
+      <image src='../../resources/images/Ic_Mine_Order.png'></image>
+      <view class='text'>
+        <text>我的订单</text>
+        <text class='skip'>></text>
+      </view>
+    </view>
+
+    <view bindtap='bindGoodcar'>
+      <image src='../../resources/images/Ic_Mine_Goodcar.png'></image>
+      <view class='text'>
+        <text>购物车</text>
+        <text class='skip'>></text>
+      </view>
+    </view>
+  </view>
+</view>

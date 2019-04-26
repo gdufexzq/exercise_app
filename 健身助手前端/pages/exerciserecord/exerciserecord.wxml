@@ -1,0 +1,21 @@
+<!-- 获取金币的记录 -->
+
+<view class='exerciserecord_container'>
+  <view class='exercise_info'>
+    <view class='exercise_text'>健身次数</view>
+    <view class='exercise_context'>{{totalCount}}</view>
+    <!-- <view>
+      <text class='exercis_today_text'>今日</text>
+      <text class='exercis_today_cotext'>{{todayCoin}}</text>
+    </view> -->
+  </view>
+  <block wx:for='{{exerciseRecordList}}'>
+    <view class='exercisedetail_info'>
+    <view class='detail_time'>{{item.date}}</view>
+    <view>
+      <text class='detail_name'>{{item.courseName}} </text>
+      <text class='detail_count'> {{item.count}}</text>
+    </view>
+  </view>
+  </block>
+</view>

@@ -1,0 +1,53 @@
+<scroll-view scroll-y class='container'>
+
+  <block wx:for='{{goodcar}}' wx:key='{{index}}'>
+    <view class='product_view_tem_parent'>
+
+      <view class='product_view_item'>
+        <view data-index='{{index}}' class='product_choose_quan' bindtap='productChoose'>
+          <image src='{{isChooseUrl[index]}}'></image>
+        </view>
+        <navigator url="../productmessage/productmessage?productId={{item.productId}}&productImage={{item.productImage}}" wx:key="productId">
+          <view class='product_image'>
+            <image src='{{item.productImage}}'></image>
+          </view>
+
+          <view class='product_words'>
+            <view class='product_word'>
+              <text class='product_title'>{{item.productName}}</text>
+              <text class='product_type'>颜色:{{item.productColor}}  类型:{{item.productType}}</text>
+              <text class='product_price'>￥{{item.productPrice}}</text>
+              <view class='total'>
+                <view data-index='{{index}}' class='jian' bindtap='reduceCount'>-</view>
+                <view class='count'>
+                  <text>{{item.productCount}}</text>
+                </view>
+                <view data-index='{{index}}' class='add' bindtap='addCount'>+</view>
+              </view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+
+    </view>
+
+  </block>
+
+
+</scroll-view>
+
+<view class='product_bottom_view'>
+  <view class='quanxuan' bindtap='chooseAll'>
+    <image class='quanxuan_image' src='{{chooseAllUrl}}'></image>
+    <text class='quanxuan_text'>全选</text>
+  </view>
+  <view class='product_total'>总计 ￥{{total_price}}</view>
+
+  <view class='jiesuan' bindtap='jiesuan'>
+    <view class='jiesuan_view'>
+      <text>结算</text>
+    </view>
+  </view>
+
+
+</view>

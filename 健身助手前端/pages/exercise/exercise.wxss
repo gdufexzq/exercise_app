@@ -1,0 +1,211 @@
+/* pages/exercise/exercise.wxss */
+.container {
+ /* position: relative; */
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+scroll-view {
+
+}
+/* .nav {
+display: flex;
+flex-direction: row;
+border-bottom: 1rpx solid #efefef;
+width: 100%;
+position:fixed;
+top:0rpx;
+} */
+
+.daka {
+  /* position: relative; */
+  background-color: #fff;
+  
+  height: 200rpx;
+  width: 100%;
+ border-bottom: 10rpx solid #efefef;
+  border-top: 10rpx solid #efefef;
+}
+.userinfo {
+  /* display: inline; */
+  border: 1px solid yellow;
+}
+.daka_button{
+  position: absolute;
+  display: inline-block;
+  right: 30rpx;
+  margin: 15rpx;
+  top: 100rpx;
+  /* width: 200rpx; */
+}
+
+.userinfo-avatar {
+  position: absolute;
+  left: 30rpx;
+  margin: 15rpx;
+  /* display:; */
+  width: 120rpx;
+  height: 120rpx;
+  /* display: flex;
+  margin: 30rpx auto; */
+  border-radius: 60rpx;
+  border: 2px solid #584F60;
+}
+.daka view {
+  height: 100rpx;
+  margin-top: 90rpx;
+}
+.userinfo-nickname {
+  color: #aaa;
+  margin-left: 200rpx;
+  padding-top: 50rpx
+}
+
+
+.coin {
+ position: relative;
+  background-color: #fff;
+  height: 250rpx;
+  width: 100%;
+  /* padding: 20rpx; */
+  margin: 15rpx 5rpx 5rpx 5rpx;
+  color: #584F60;
+  /* padding: 50rpx; */
+}
+.total_coin_text {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.total_coin {
+   position: absolute;
+  font-size: 50px;
+  left: 10rpx;
+  bottom: 10rpx;
+}
+.today_coin {
+  position: absolute;
+  right: 30rpx;
+  bottom: 50rpx;
+}
+.course {
+  position: relative;
+  background-color: #fff;
+  /* height: 250rpx; */
+  width: 100%;
+  margin: 15rpx 5rpx 5rpx 5rpx;
+}
+.coourse_head {
+  height: 80rpx;
+}
+.course_text_black{
+  /* display: inline; */
+  /* position: absolute; */
+  left: 10rpx;
+  top: 10rpx;
+  font-weight: 20rpx;
+}
+.course_text_shen{
+  /* display: inline; */
+  /* position: absolute; */
+  left: 10rpx;
+  top: 10rpx;
+  color: #584F60;
+}
+.course_text_qian{
+  /* display: inline; */
+  /* position: absolute; */
+  left: 10rpx;
+  top: 10rpx;
+  color: #bfc2c7;
+}
+.course_add {
+  /* display: inline; */
+ position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  right: 50rpx;
+  top: 10rpx;
+}
+
+.course_item {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  width: 90%;
+  height: 300rpx;
+  border-bottom: 2rpx solid #bfc2c7;
+  margin: 20rpx auto;
+  /* 设置透明度 */
+  /* opacity:0.5; */
+}
+
+.title {
+  /* position: absolute;
+  margin: 50rpx;
+  padding: 50rpx;
+  top: 10rpx;
+  left: 100rpx; */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+.level {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+}
+
+.course_item_total {
+  display: flex;
+  justify-content: center;
+   margin: 10rpx;
+  padding-bottom: 20rpx;
+}
+.activity {
+  position: relative;
+  background-color: #fff;
+  /* height: 250rpx; */
+  width: 100%;
+  margin: 15rpx 5rpx 5rpx 5rpx;
+}
+.activity_text_qian{
+   left: 10rpx;
+  top: 10rpx;
+  color: #bfc2c7;
+}
+.nav {
+display: flex;
+flex-direction: row;
+border-bottom: 1rpx solid #efefef;
+width: 100%;
+position:fixed;
+top:0rpx;
+}
+.nav button::after {
+border: none;
+}
+
+.nav button {
+font-size: 30rpx;
+height: 70rpx;
+padding: 0;
+background-color: white;
+color: #bfc2c7;
+}
+.select {
+  color: #584F60;
+} 
+

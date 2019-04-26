@@ -1,0 +1,27 @@
+<!--pages/find/find.wxml-->
+<!--商城首页 -->
+<view class="section">
+    <!-- 左侧类型 -->
+    <scroll-view scroll-y="true" class="left">
+        <view wx:for="{{types}}" wx:key="typeId" data-type-id="{{item.id}}" bindtap="tapType" class="{{item.id == currType ? 'active' : ''}}" style="font-size:33rpx">
+            {{item.categoryName}}
+        </view>
+    </scroll-view>
+
+    <!-- 右侧数据 -->
+    <scroll-view scroll-y="true" class="right">
+        <view class="typeTree">
+            <view  class="brand" wx:for="{{typeList}}" wx:for-item="data">
+                <navigator url="../productmessage/productmessage?productId={{data.id}}&productImage={{data.productImage}}" wx:key="typeId" class="item">
+                <view >
+                
+                </view>
+                    <image src="{{data.productImage}}"></image>
+                    <text>{{data.productName}}</text>
+                    <text>￥{{data.productPrice}}</text>
+                </navigator>
+                    
+            </view>
+        </view>
+    </scroll-view>
+</view>

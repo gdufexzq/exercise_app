@@ -1,0 +1,38 @@
+<view scroll-y class='container'>
+
+  <block wx:for='{{productOrderDetail}}' wx:key='{{index}}'>
+    <navigator url="../productmessage/productmessage?productId={{item.productId}}&productImage={{item.productImage}}" wx:key="productId">
+      <view class='product_view_tem_parent'>
+
+        <view class='product_view_item'>
+          <!-- <view data-index='{{index}}' class='product_choose_quan' bindtap='productChoose'>
+            <image src='{{isChooseUrl[index]}}'></image>
+          </view> -->
+          <view class='product_image'>
+            <image src='{{item.productImage}}'></image>
+          </view>
+
+          <view class='product_words'>
+            <view class='product_word'>
+              <text class='product_title'>{{item.productName}}</text>
+              <text class='product_type'>颜色:{{item.color}}  类型:{{item.type}}</text>
+              <text class='product_price'>￥{{item.productPrice}}</text>
+              <view class='total'>
+               
+                <view class='count'>
+                X
+                  <text>{{item.count}}</text>
+                </view>
+               
+              </view>
+            </view>
+          </view>
+        </view>
+
+      </view>
+    </navigator>
+  </block>
+
+
+</view>
+

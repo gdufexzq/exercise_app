@@ -1,0 +1,106 @@
+<!-- 产品信息购买页面 导入template-->
+<import src="../productmessagechoose/productmessagechoose" />
+<view class='container'>
+  <view class="product">
+    <swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{productImage}}">
+        <swiper-item>
+          <image src="{{item.imageUrl}}" class="slide-image" width="100%" height="150"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--重置小圆点的样式 -->
+    <view class="dots">
+      <block wx:for="{{productImage}}">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class='producet_view'>
+
+    <view class='product_view_pay'>
+      <text class='jiage'>￥ {{productInfo.productPrice}}</text>
+    </view>
+    <view class='product_view_name'>
+      <text>{{productInfo.productName}}</text>
+    </view>
+    <view class='product_view_miaoshu'>
+      <text>{{productInfo.productDetail}}</text>
+    </view>
+    <view class='product_view_xian'></view>
+
+
+    <view bindtap='choose'>
+      <view class='product_view_choose'>
+        <text>选择</text>
+      </view>
+      <view class='product_view_type'>
+        <text>颜色{{color}} 规格{{type}}</text>
+      </view>
+      <view class='product_view_jiaotou'>
+        <text> > </text>
+      </view>
+      <!-- <template is='productTypeColor' data='{{...templateData}}'></template> -->
+    </view>
+
+    <view class='product_view_xian_2'></view>
+    <view class='product_mygoodcar'>
+      <view bindtap='bindGoodCar'>
+        <image src='../../resources/images/Ic_Good_Car.png'></image>
+        <text>购物车</text>
+      </view>
+    </view>
+    <view class='product_goodcar'>
+      <view bindtap='bindAddGoodCar'>
+        <text>加入购物车</text>
+      </view>
+    </view>
+    <view class='product_pay' bindtap='bindOrder'>
+      <view>
+        <text>立即购买</text>
+      </view>
+    </view>
+  </view>
+  <!-- 弹出框 -->
+  <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{templateData.showModalStatus}}"></view>
+  <!--content-->
+  <!--使用animation属性指定需要执行的动画-->
+  <view animation="{{animationData}}" class="drawer_box" wx:if="{{templateData.showModalStatus}}">
+    <!--drawer content-->
+    <view class="drawer_title">
+      <image src='{{templateData.productImage}}'></image>
+      <text>请选择颜色 规格</text>
+    </view>
+    <view class="drawer_content">
+      <view class="top">
+        <text>选择颜色</text>
+        <block wx:for="{{templateData.productColor}}" wx:key="{{index}}">
+          <text data-index="{{index}}" class='{{select1==index?"name select":"name"}}' bindtap='bindColor'>{{item.productColor}}</text>
+
+        </block>
+
+      </view>
+      <view class="top bottom">
+        <text>选择规格</text>
+        <block wx:for="{{templateData.productType}}" wx:key="{{index}}">
+          <text data-index="{{index}}" class='{{select2==index?"type select":"type"}}' bindtap='bindType'>{{item.productType}}</text>
+        </block>
+      </view>
+      <view class='shuliang'>
+        <text>购买数量 </text>
+        <view class='total'>
+          <view class='jian' bindtap='bindjian'>-</view>
+          <view class='count'>
+            <text>{{count}}</text>
+          </view>
+          <view class='add' bindtap='bindAdd'>+</view>
+        </view>
+
+      </view>
+    </view>
+    <view class='option'>
+      <view class="btn_cancel" bindtap="cancel" data-statu="close">取消</view>
+      <view class="btn_ok" bindtap="confirm" data-statu="close">确定</view>
+    </view>
+  </view>
+</view>

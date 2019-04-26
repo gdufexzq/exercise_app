@@ -1,0 +1,25 @@
+<!--pages/exercisedetaillistone/exercisedetaillistone.wxml-->
+<!-- 课程详细页面 -->
+<view class='container'>
+  <view class='video_view'>
+    <video bindplay='bindplay' bindpause='bindpause' class='video_video' autoplay='{{autoplay}}'
+    bindended='bindended'
+    src='{{videoUrl}}'>
+    </video>
+  </view>
+  <view class='view_name'><text class='text_name'>{{courseInfo.courseName}}</text></view>
+  <scroll-view scroll-y class='activity_library'>
+  <block wx:for='{{activityList}}' wx:key='index'>
+    <view data-index='{{index}}' class='activity_item' bindtap='bindcurUrl'>
+      <image src='{{item.imageUrl}}'></image>
+      <view class='activityInfo'>
+        <view class='name'><text>{{item.activityName}}</text></view>
+        <view class='payload'><text>{{item.activityPayload}}</text></view>
+      </view>
+    </view>
+  </block>
+  </scroll-view>
+   
+</view>
+ <view wx:if='{{isStart == 0}}' class='xuanlian' bindtap='start'><view>开始训练</view></view>
+ <view wx:if='{{isStart != 0}}' class='xuanlian' bindtap='end'><view>结束训练</view></view>

@@ -1,0 +1,32 @@
+<view class='container'>
+  <view class='content_headimage'>
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}志权</text>
+  </view>
+  <view class='content_content'>
+    评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容
+  </view>
+  <view class='content_image'>
+    <image src='https://static1.keepcdn.com/2016/11/08/15/1478591073270_750x700.jpg'></image>
+    <image src='https://static1.keepcdn.com/2016/11/08/15/1478591073270_750x700.jpg'></image>
+    <image src='https://static1.keepcdn.com/2016/11/08/15/1478591073270_750x700.jpg'></image>
+    <image src='https://static1.keepcdn.com/2016/11/08/15/1478591073270_750x700.jpg'></image>
+  </view>
+  <view class='content_dianzan'>
+    <image class='dianzan_image' src='../../resources/images/Ic_Content_Normal.png'></image>
+    <text>32</text>
+    <image class='pinglun_image' src='../../resources/images/Ic_Content_Content.png'></image>
+  </view>
+  <view class='content_pinglun'>
+    <!-- <text>暂无评论内容</text> -->
+    <view class='content_neirong'><text>{{userInfo.nickName}}志权:</text>
+       <text>内容</text>
+     </view>
+     <view class='content_neirong'><text>{{userInfo.nickName}}志权:</text>
+       <text>内容</text>
+     </view>
+     <view class='content_neirong'><text>{{userInfo.nickName}}志权:</text>
+       <text>内容</text>
+     </view>
+  </view>
+</view>

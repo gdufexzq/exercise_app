@@ -1,0 +1,63 @@
+/* pages/communitydetail/communitydetail.wxss */
+.container {
+ display: flex;
+ flex-direction: column;
+}
+.content_headimage {
+  height: 100rpx;
+  margin-top: 50rpx;
+}
+.userinfo-avatar {
+  position: absolute;
+  left: 30rpx;
+  margin: 15rpx;
+  /* display:; */
+  width: 120rpx;
+  height: 120rpx;
+  /* display: flex;
+  margin: 30rpx auto; */
+  border-radius: 60rpx;
+  border: 2px solid #584F60;
+}
+
+.userinfo-nickname {
+  color: #7695ce;
+  font-size: 50rpx;
+  margin-left: 200rpx;
+  margin-top: 100rpx;
+}
+
+.content_content {
+  margin-left: 200rpx;
+  margin-top: 25rpx;
+
+}
+
+.content_image {
+  /* display: inline-block; */
+  margin: 20rpx;
+}
+.content_image image {
+  margin: 10rpx;
+  width: 30%;
+  height: 100rpx;
+}
+
+.dianzan_image {
+  width: 70rpx;
+  height: 70rpx;
+}
+.pinglun_image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 540rpx;
+}
+
+.content_pinglun{
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}
+.content_neirong {
+  margin: 10rpx;
+  
+}

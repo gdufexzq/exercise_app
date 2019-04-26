@@ -1,0 +1,33 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class='container'>
+  <view class='nav' bindtap='selectType'>
+    <block wx:for="{{orderHead}}" wx:key="{{index}}">
+      <view data-oid='{{item.id}}' style='{{oid==item.id?"color:#584F60":""}}' class='{{oid==item.id?"select":""}}'>{{item.name}}</view>
+    </block>
+  </view>
+  <scroll-view class='scroll_view' scroll-y>
+    <block wx:for='{{orderList}}' wx:key='{{index}}'>
+      <block wx:for='{{item[1]}}'>
+        <view class='order_info'>
+          <image class='product_img' src='{{item.productImage}}'></image>
+          <view class='info'>
+            <text>{{item.productName}}</text>
+            <text class='color_type'>颜色:{{item.productColor}}  规格:{{item.productType}}</text>
+            <text>￥{{item.productPrice}}</text>
+          </view>
+
+          <view class='product_count'>
+
+            <text>x{{item.productCount}}</text>
+          </view>
+        </view>
+      </block>
+      <view class='total_info'>
+        <text>￥{{item[0]}}</text>
+      </view>
+
+    </block>
+
+  </scroll-view>
+
+</view>

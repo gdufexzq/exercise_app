@@ -1,0 +1,24 @@
+<!-- 打卡页面
+ 每天打卡奖励10运动币
+ 连续7天奖励100
+ 连续一个月奖励200
+ -->
+<calendar calendar-style="calendar" header-style='header-style' active-coloro="active-coloro" weekheight="100"  headline-style="headline-style" remark_show="{{true}}"
+remark_style="userdefined" count_txt_user='{{count_txt_user}}' speciallist='{{speciallist}}' txt_style='{{txt_style}}' />
+<view class='qiandao_parent'>
+  <view class='qiandao' bindtap='daka'><text>签到</text></view>
+</view>
+
+<text class='detail' bindtap='showDetail'>规则</text>
+
+<!--  规则提示  -->
+    <view class="detailZhezhao {{isDetail?'isDetailShow':'isDetailHide'}}">
+        <view class='detailZhezhaoContent'>
+            <view class='detailZhezhaoText' wx:for='{{detail}}' wx:for-index='index'>
+                <text>{{item.id}}</text>
+                <text>{{item.content}}</text>
+            </view>
+            <image src='../../resources/images/Ic_Detail_Hide.png' class='detailHide' bindtap='hideDetail'></image>
+        </view>
+    </view>
+    <!--  end  -->

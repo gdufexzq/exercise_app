@@ -1,0 +1,46 @@
+<!--pages/exerciseList/exerciseList.wxml-->
+<!-- 健身页面 -->
+<view class='container'>
+  <view class='exercise_data' bindtap='bindexercisedata'>
+    <view class='exercise_text'>累计健身次数 ></view>
+    <view class='exercise_info'>
+      <text class='exercise_min'>{{total_exercise}}</text>
+      <text class='exercise_min_txt'>次</text>
+      <!-- <text class='exercise_deng_ji'>今日 {{}}次</text> -->
+    </view>
+  </view>
+
+  <view class='course'>
+    <view>
+      <text class='course_text_qian'>健身课程</text>
+      <!-- <image bindtap="bindCourse" class="course_add" src="{{courseAddUrl}}" mode="cover"></image> -->
+    </view>
+    <block wx:for='{{courseFourList}}' wx:key='index'>
+      <view data-index='{{index}}' bindtap='bindCourse' class='course_item' style=' background-image: url("{{item.imageUrl}}");'>
+        <view class='title'>
+          <text>{{item.categoryName}}</text>
+        </view>
+        <view class='count'>
+          <text>{{item.categoryCount}}个课程</text>
+        </view>
+      </view>
+    </block>
+</view>
+    <view class='course_item_total' bindtap='bindCourseTotal'>
+        <text class='course_text'>查看全部</text>
+    </view>
+
+    <!-- <view class='activity'>
+      <view>
+        <text class='activity_text_qian'>热门活动</text>
+      </view>
+      <swiper class="swiper-block" previous-margin="90rpx" next-margin="90rpx" current="{{swiperIndex}}" bindchange="swiperChange">
+        <block wx:for="{{imgUrls}}" wx:index="{{index}}">
+          <swiper-item class="swiper-item">
+            <image mode="aspectFill" src="{{item.src}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+            <view class='swiper_view_text'>{{item.text}}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view> -->
+  </view>

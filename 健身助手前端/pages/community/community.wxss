@@ -1,0 +1,174 @@
+.container {
+  /* display: flex; *//* justify-content: center; */
+}
+
+.content_head {
+  height: 100rpx;
+  width: 100%;
+  border-bottom: 5rpx solid #efefef;
+}
+
+.one {
+  margin: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  display: inline-block;
+}
+.one image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.all {
+  margin: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  display: inline-block;
+}
+.all image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.content_xianshi {
+  float: left;
+  width: 50%;
+  height: 100rpx;
+  margin: 10rpx;
+  font-size: 50rpx;
+}
+
+.publish_img {
+  float: right;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.community_item {
+  /* margin: 10rpx; */
+  width: 100%;
+  /* height: 360rpx; *//* padding: 30rpx; *//* float: left; */
+}
+
+.user_info {
+  width: 100%;
+  height: 100rpx;
+  margin: 10rpx;
+  display: inline-block;
+}
+
+.user_info > image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+.user_info view {
+  display: inline-block;
+  width: 500rpx;
+  height: 50rpx;
+}
+.user_info_detail view {
+  margin-left: 50rpx;
+}
+.community_item_context {
+  /* 设置text自动换行 */
+  word-break: break-all;
+  width: 90%;
+  /* margin-left: 130rpx; */
+  margin-top: 20rpx;
+  /* margin-right: 30rpx; */
+  padding: 30rpx;
+}
+
+.community_item_context > text {
+  width: 100%;
+  font-size: 50rpx;
+}
+
+.community_item_img {
+  height: 230rpx;
+  width: 230rpx;
+  margin: 10rpx;
+}
+
+.community_item_user {
+}
+
+.community_item_user text {
+  color: #b2f4c3;
+  font-size: 40rpx;
+  padding: 10rpx;
+  /* margin: 20rpx; */
+}
+
+.community_item_tubiao {
+  margin-left: 20rpx;
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+
+.community_item_content {
+  float: right;
+  height: 60rpx;
+  width: 60rpx;
+  margin-right: 20rpx;
+}
+
+.content_text {
+  /* margin: 20rpx; */
+  padding: 20rpx;
+  width: 100%;
+  border-bottom: 10rpx solid #efefef;
+}
+
+/* 评论框*/
+
+.comment_model {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.input-box {
+  position: fixed;
+  background-color: #f8f8f8;
+  padding: 30rpx;
+  padding-left: 15rpx;
+  margin: 0rpx;
+  padding-bottom: 0rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  overflow: hidden;
+}
+
+.content_comment {
+  background-color: #fff;
+  width: 88%;
+  padding: 5rpx;
+  padding-left: 10rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  float: left;
+  margin-bottom: 30rpx;
+}
+
+.comment_placeholder {
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  padding: 5rpx;
+}
+
+.send {
+  float: right;
+  font-size: 30rpx;
+  margin-top: 5rpx;
+  color: #09bb07;
+  position: static;
+}

@@ -1,0 +1,11 @@
+<view class='mydata_container'>
+  <view class='mydata'><text class='mydata_text'>我的数据</text></view>
+  <view class='totalCoin' bindtap='bindTotalCoin'>
+    <view class='totalCoin_text'>累计所得运动币(个) <text class='skip'>></text></view>
+    <view class='totalCoin_context'>{{totalCoin}}</view>
+  </view>
+  <view class='totalCount' bindtap='bindTotalCount'>
+  <view class='totalCount_text'>健身(次数) <text class='skip'>></text></view>
+  <view class='totalCount_context'>{{totalCount}}</view>
+  </view>
+</view>

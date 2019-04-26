@@ -1,0 +1,46 @@
+.course_container {
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+view {
+}
+
+.course_item {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  width: 90%;
+  height: 300rpx;
+  border-bottom: 2rpx solid #bfc2c7;
+  margin: 20rpx auto;
+  /* 设置透明度 */
+  /* opacity:0.5; */
+}
+
+.title {
+  /* position: absolute;
+  margin: 50rpx;
+  padding: 50rpx;
+  top: 10rpx;
+  left: 100rpx; */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+.level {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+
+.count {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+}

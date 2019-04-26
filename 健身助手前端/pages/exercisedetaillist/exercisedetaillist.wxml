@@ -1,0 +1,10 @@
+<!--pages/exercisedetaillist/exercisedetaillist.wxml-->
+<!-- 全部课程页面 -->
+<view class='container'>
+<block wx:for='{{courseList}}' wx:key='index'>
+<view data-index='{{index}}' class='course_item' bindtap='bindCourse' style=' background-image: url("{{item.imageUrl}}");'>
+      <view class='title'>{{item.categoryName}}</view>
+      <view class='count'>{{item.categoryCount}}个课程</view>
+    </view>
+</block>
+</view>

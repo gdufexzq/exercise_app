@@ -1,0 +1,16 @@
+<!-- 我参加的课程 -->
+<view class='course_container'>
+  <block wx:for='{{myCourseInfoList}}' wx:key='index'>
+    <view data-index='{{index}}' style='background-image: url("{{item.imageUrl}}");' class='course_item' bindtap='bindCourse'>
+      <view class='title'>
+        <text>{{item.courseName}}</text>
+      </view>
+      <view class='level'>
+        <text>{{item.courseLevel}}</text>
+      </view>
+      <view class='count'>
+        <text>{{item.personCount}}人训练</text>
+      </view>
+    </view>
+  </block>
+</view>

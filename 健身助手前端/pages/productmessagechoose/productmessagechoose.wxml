@@ -1,0 +1,43 @@
+<!-- 商品类型，数量选择界面 -->
+<!-- <import src="../template/template" />
+<text bindtap='choose' data-statu="open" class='rewardIcon' >ygyyvyv</text>
+<template is='share' data='{{...templateData}}'></template> -->
+<template name="productTypeColor">
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content--> 
+<!--使用animation属性指定需要执行的动画--> 
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+<!--drawer content--> 
+<view class="drawer_title"><image src='{{productImage}}'></image><text>请选择颜色 规格</text></view> 
+<view class="drawer_content"> 
+<view class="top">
+<text>选择颜色</text>
+<block wx:for="{{productColor}}">
+<text class='name' bindtap='bindColor'>{{item.productColor}}</text>
+
+</block>
+
+</view> 
+<view class="top bottom"> 
+<text>选择规格</text>
+<block wx:for="{{productType}}">
+<text class='type' bindtap='bindType'>{{item.productType}}</text>
+</block>
+</view>
+<view class='shuliang'>
+<text>购买数量 </text>
+<view class='total'>
+<view class='jian' bindtap='bindjian'>-</view>
+<view class='count'><text>{{count}}</text></view>
+<view class='add' bindtap='bindAdd'>+</view>
+</view>
+
+</view>
+</view> 
+<view class='option'>
+<view class="btn_cancel" bindtap="cancel" data-statu="close">取消</view> 
+<view class="btn_ok" bindtap="confirm" data-statu="close">确定</view> 
+</view>
+</view>
+</template>
+

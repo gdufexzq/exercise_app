@@ -1,0 +1,27 @@
+/* pages/addresslist/addresslist.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+.add_btn{
+  height: 10vh;
+  width: 200rpx;
+  /* background-color: #24c68a; */
+  margin-right: 20rpx;
+}
+.btn {
+  /* color: #24c68a; */
+  background-color: #24c68a;
+  /* margin-left: 500rpx; */
+}
+
+.address {
+  height: 90vh;
+}
+.address_item {
+  margin: 20rpx;
+  border: 3rpx solid #efefef;
+  background-color: #fff;
+}

@@ -1,0 +1,117 @@
+/* pages/goodcar/goodcar.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  height: 88vh;
+}
+
+.product_view_item_parent {
+  
+  height: 100rpx;
+  margin-bottom: 50rpx;
+  padding-bottom: 50rpx;
+  /* width: 100%; */
+}
+
+.product_view_item {
+  /* float: left; */
+ height:180rpx;
+  position: relative;
+}
+.product_choose_quan {
+  position: absolute;
+   width: 50rpx;
+   height: 50rpx;
+   margin-top: 70rpx;
+   margin-left: 30rpx;
+}
+
+.product_choose_quan image {
+   width: 50rpx;
+   height: 50rpx;
+}
+.product_image {
+  position: absolute;
+  width: 25%;
+  height: 100rpx;
+  margin-left: 110rpx;
+  margin-top: 30rpx;
+}
+
+.product_image image {
+ 
+  width: 150rpx;
+  height: 150rpx;
+}
+.product_words {
+  position: absolute;
+  /* height: 100rpx; */
+  margin-left: 300rpx;
+  margin-top: 20rpx;
+}
+.product_word {
+  position: relative;
+  width: 500rpx;
+  height: 200rpx;
+}
+.product_words .product_title {
+  position: absolute;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.product_type {
+  position: absolute;
+  font-size: 20rpx;
+  margin-top: 60rpx;
+}
+.product_price {
+  position: absolute;
+  font-size: 30rpx;
+  margin-top: 100rpx;
+  color: #1ECBBE;
+}
+ .total{
+  position: absolute;
+  margin-top: 80rpx;
+  right: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jian {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #bfc2c7 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.count{
+  width: 100rpx;
+  height: 100rpx;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.count text{
+  font-size: 50rpx;
+  /* text-align:center; */
+   /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 10rpx;
+  padding-left: 0rpx;
+  padding-right: 50rpx;
+}
+.add {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #bfc2c7  ;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

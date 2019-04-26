@@ -1,0 +1,30 @@
+<!-- 每个课程详细页面 -->
+<scroll-view scroll-y class='coursedetail_container'>
+  
+    <view style='background-image: url("{{courseInfo.imageUrl}}");' class='course_item' bindtap='bindCourse'>
+      <view class='title'>
+        <text>{{courseInfo.courseName}}</text>
+      </view>
+      <view class='context'>
+        <text>{{courseInfo.courseContext}}</text>
+      </view>
+      <view class='count_level'>
+        <view class='level'><text>{{courseInfo.courseLevel}}</text></view>
+        <view class='count'><text>{{courseInfo.personCount}}人训练</text></view>
+      </view>
+    </view>
+
+  <block wx:for='{{activityList}}' wx:key='index'>
+    <view class='activity_item'>
+      <image src='{{item.imageUrl}}'></image>
+      <view class='activityInfo'>
+        <view class='name'><text>{{item.activityName}}</text></view>
+        <view class='payload'><text>{{item.activityPayload}}</text></view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view data-index='{{courseInfo.id}}' bindtap='bindexerciseVideo' class='xuanlian'>
+<view wx:if='{{recordCount == 0}}'>加入训练</view>
+<view wx:if='{{recordCount != 0}}'>开始你的第{{recordCount}}次训练</view>
+</view>

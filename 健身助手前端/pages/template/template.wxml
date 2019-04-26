@@ -1,0 +1,41 @@
+<!-- 说说模板 -->
+<!-- <wxs src="./../tools.wxs" module="tools" /> -->
+<template name="share">
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<!--content--> 
+<!--使用animation属性指定需要执行的动画--> 
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}"> 
+<!--drawer content--> 
+<view class="drawer_title"><image src='http://img.alicdn.com/bao/uploaded/i3/1842780198/O1CN01xF9tLv1DKiuRMKtY5_!!0-item_pic.jpg'></image><text>请选择颜色 规格</text></view> 
+<view class="drawer_content"> 
+<view class="top">
+<text>选择颜色</text>
+<text class='name'>黑色</text>
+<text class='name'>黑色</text>
+<text class='name'>黑色</text>
+<text class='name'>黑色</text>
+<text class='name'>黑色</text>
+</view> 
+<view class="top bottom"> 
+<text>选择规格</text>
+<text class='type'>双轮版</text>
+<text class='type'> 双轮回弹版</text>
+<text class='type'> 双轮回弹版</text>
+<text class='type'> 双轮回弹版</text>
+</view> 
+<view class='shuliang'>
+<text>购买数量 </text>
+<view class='total'>
+<view class='jian'>-</view>
+<view class='count'><text>1</text></view>
+<view class='add'>+</view>
+</view>
+
+</view>
+</view> 
+<view class='option'>
+<view class="btn_cancel" bindtap="cancel" data-statu="close">取消</view> 
+<view class="btn_ok" bindtap="confirm" data-statu="close">确定</view> 
+</view>
+</view>
+</template>

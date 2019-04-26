@@ -1,0 +1,190 @@
+/* pages/addaddress/addaddress.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.address_name {
+  position: relative;
+  height: 100rpx;
+}
+.address_name text {
+  position: absolute;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  color: #000;
+}
+
+.address_name input {
+  position: absolute;
+  left: 300rpx;
+  margin: 40rpx;
+  width: 300rpx;
+}
+
+.address_phone {
+  position: relative;
+  height: 100rpx;
+
+}
+
+.address_phone text {
+  position: absolute;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  color: #000;
+}
+
+.address_phone input {
+  position: absolute;
+  left: 300rpx;
+  margin: 40rpx;
+  width: 300rpx;
+}
+
+.address_address {
+  position: relative;
+  height: 100rpx;
+
+}
+
+.address_address text {
+  position: absolute;
+  margin-left: 20rpx;
+  margin-top: 50rpx;
+  font-size: 40rpx;
+  color: #000;
+}
+
+.address_address input {
+  position: absolute;
+  left: 300rpx;
+  margin: 40rpx;
+  width: 300rpx;
+}
+
+.address_xianxi {
+  position: relative;
+  height: 100rpx;
+
+}
+
+.address_xianxi textarea {
+  position: absolute;
+  margin-left: 20rpx;
+  margin-top: 150rpx;
+  font-size: 40rpx;
+  color: #000;
+  height: 100rpx;
+}
+
+
+.address_save {
+  position: relative;
+   height: 150rpx;
+   /* background-color: #24c68a; */
+   width: 50%;
+   margin-top: 200rpx;
+   margin-left: 200rpx;
+   
+}
+.address_save_parent {
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 45rpx;
+}
+.address_save_parent text {
+  /* position: absolute;
+  margin-left: 20rpx;
+  margin-top: 150rpx;
+  font-size: 100rpx;
+  color: #000; */
+  font-size: 80rpx;
+  color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+
+picker-view{
+  background-color: white;
+  padding: 0;
+  width: 100%; 
+  height: 380rpx;
+  bottom: 0;
+  position: fixed;
+}
+
+picker-view-column view{
+  vertical-align:middle; 
+  font-size: 28rpx;
+  line-height: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----------------------------------------- */
+
+.animation-element-wrapper {
+  display: flex;  
+  position: fixed;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.animation-element {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 470rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.animation-button {
+  margin-top: 20rpx;
+  top:20rpx;
+  width: 400rpx;
+  height: 100rpx; 
+  line-height: 100rpx; 
+  align-items:center;
+}
+
+
+text{
+  color: #999999;
+  display: inline-flex;  
+  position: fixed;
+  margin-top: 20rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-bt{
+  left: 30rpx;
+}
+.right-bt {
+  right: 30rpx;
+}
+
+.line{
+  display: block;
+  position: fixed;
+  height: 1rpx;
+  width: 100%;
+  margin-top: 89rpx; 
+  background-color: #eeeeee;
+}

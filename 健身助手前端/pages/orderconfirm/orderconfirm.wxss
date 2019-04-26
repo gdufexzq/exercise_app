@@ -1,0 +1,99 @@
+/* pages/orderconfirm/orderconfirm.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+
+.shouhuo {
+  font-size: 50rpx;
+  margin: 30rpx;
+  background-color: #fff;
+}
+.address_item {
+  font-size: 30rpx;
+}
+.youhui {
+  font-size: 30rpx;
+  color: #bfc2c7;
+  margin: 30rpx;
+}
+
+.image_view {
+  margin: 0rpx 30rpx 30rpx 30rpx;
+  display: inline-block;
+  background-color: #fff;
+}
+.image_view image {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 30rpx;
+}
+.pay_info {
+background-color: #fff;
+margin: 30rpx;
+}
+.shiji_pay {
+  
+  color: #24c68a;
+ background-color: #fff;
+}
+
+.daofu {
+  margin: 30rpx;
+}
+ .weixin_pay{
+   margin: 30rpx;
+   background-color: #fff;
+ }
+.total_pay_view {
+  position: relative;
+  margin-top: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .total_pay {
+   position: absolute;
+   margin: 0rpx;
+   left: 10rpx;
+   color: #24c68a;
+   bottom: 0rpx;
+ }
+ .confirm {
+   position: absolute;
+   margin-top: 300rpx;
+   bottom:0rpx;
+   right: 0rpx;
+   background-color: #24c68a;
+   width: 300rpx;
+   height: 100rpx;
+   font-size: 50rpx;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.daofu_view {
+  position: relative;
+}
+
+ .daofu_pay_image {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  right: 20rpx;
+
+}
+
+.weinxi_pay_view {
+  position: relative;
+}
+ .weixin_pay_image {
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  right: 20rpx;
+
+}

@@ -1,0 +1,19 @@
+<!-- 发表文章界面,参考 恋伴儿-->
+<view class="textareaView">
+  <textarea placeholder="记录这健身时刻..." auto-focus adjust-position bindinput="bindblur" class="textarea" maxlength='512'></textarea>
+  <view class="imgs_Add">
+    <view wx:for="{{imgList}}" wx:key="{{index}}" class="selectedImg_cancel">
+    <!-- mode	String	'scaleToFill'	图片裁剪、缩放的模式
+      缩放	aspectFill	保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，
+      图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+     -->
+      <image src="{{item}}" class="selectedImg" mode="aspectFill"></image>
+      <image src="../../resources/images/Ic_Content_DeletePhoto.png" class="cancelIcon" bindtap="deleteSelectedImg" data-index="{{index}}" />
+    </view>
+    <image src="../../resources/images/Ic_Content_AddPhoto.png" class="addImg" bindtap="chooseImage"></image>
+  </view>
+</view>
+<view class="topView">
+  <switch class="setPrivate" bindchange="onlyMe">仅自己可见</switch>
+  <view bindtap="confirmPublish" class="confirmPublish">发表</view>
+</view>

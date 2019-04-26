@@ -1,0 +1,24 @@
+<!--pages/addresslist/addresslist.wxml-->
+<view class='container'>
+  <view class='add_btn' bindtap='toAddAddress'>
+    <button class='primary btn'>新增</button>
+  </view>
+  <scroll-view scroll-y class='address'>
+    <block wx:for='{{addressList}}' wx:key='{{index}}' wx:if='{{addressList}}'>
+      <navigator url='../orderconfirm/orderconfirm?addressId=1' open-type="redirect">
+        <view data-index='{{index}}' class='address_item' bindtap='getAddressList'>
+          <view class='address_name'>
+            <text>收件人: {{item.userName}}</text>
+          </view>
+          <view class='address_phone'>
+            <text>电话: {{item.userPhone}}</text>
+          </view>
+          <view class='address_address'>
+            <text>收货地址：{{item.userProvinceCityCounty}}        {{item.userDetailAddress}}</text>
+          </view>
+        </view>
+      </navigator>
+
+    </block>
+  </scroll-view>
+</view>

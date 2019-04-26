@@ -1,0 +1,21 @@
+<!--未参加挑战页面-->
+
+<view class='container'>
+  <!-- <view class='activity_view_title'><text class='activity_text_title'>20个俯卧撑</text></view>
+   <view class='activity_view_miaoshu'><text class='activity_text_miaoshu'>完成 20 个俯卧撑，就能完成活动，你一定可以的，我们马上开始吧，
+   练习俯卧撑一起努力让身体更棒</text></view> -->
+  <view class='view_image'>
+    
+  </view>
+  <view class='activity_detail'>
+     <view class='activity_detail_icon_view'><image class='activity_detail_icon' src='../../resources/images/Ic_Activity_Tiaozhan.png'></image>
+     <text class='activity_detail_icon_text'>20个俯卧撑</text>
+     </view>
+    <view class='activity_detail_day'>坚持5天即可完成挑战</view>
+
+    <view class='activity_detail_today'>还没开始挑战</view>
+    <view class='activity_detail_parent_start'>
+      <view class='activity_detail_start'>接受挑战</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gdufe.exercise_app.dao.DakaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gdufe.exercise_app.entity.Daka">
+        <id column="id" property="id" />
+        <result column="user_name" property="userName" />
+        <result column="cur_time" property="curTime" />
+        <result column="daka" property="daka" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="openid" property="openid" />
+        <result column="ex1" property="ex1" />
+        <result column="ex2" property="ex2" />
+        <result column="ex3" property="ex3" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_name, cur_time, daka, create_time, modify_time, openid, ex1, ex2, ex3
+    </sql>
+
+</mapper>

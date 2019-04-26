@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: dev
+  http:
+      encoding:
+        charset: UTF-8
+        force: true
+        enabled: true
+
+server:
+  servlet:
+    context-path: /exercise_app
+  port: 8090
+#  ssl:
+#    key-store: classpath:ruanjiangongcheng2.xyz.jks
+#    key-store-password: 6be4e5stjz3q
+#    keyStoreType: JKS
+#    keyAlias: ruanjiangongcheng2.xyz
+#  tomcat:
+#    uri-encoding: UTF-8
+
+# 端口设置
+port:
+  http: 8091
+  https: 8090
+
+

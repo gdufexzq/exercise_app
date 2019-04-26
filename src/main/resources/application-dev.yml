@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/exercise_app?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: 123
+    druid:
+      filters: stat,wall
+      max-active: 20
+      initial-size: 5
+      max-wait: 60000
+      min-idle: 5
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      remove-abandoned-timeout: 1800
+#server:
+#  servlet:
+#    context-path: /exercise_app
+#      max-open-prepared-statements: 50
+#      max-pool-prepared-statement-per-connection-size: 20
+server:
+  servlet:
+    context-path: /exercise_app
+  port: 8090
+
+
+
+# 配置slq打印日志
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#配置minioClient
+minio:
+#  endpoint: http://ruanjiangongcheng2.xyz:9000
+  urlPath: http://localhost:9000
+#  urlPath: http://192.168.137.1:9000
+  accessKey: 9B4LHNEX9A8QIYGQITTI
+  secretKey: C30r2a8CzyuDs0MO4gW0l7HVDolyYD1BsdP9+MyL
+  exerciseBucket: exercise-app
+
+

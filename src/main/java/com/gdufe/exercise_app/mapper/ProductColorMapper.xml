@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gdufe.exercise_app.dao.ProductColorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gdufe.exercise_app.entity.ProductColor">
+        <id column="id" property="id" />
+        <result column="product_color" property="productColor" />
+        <result column="proudct_count" property="proudctCount" />
+        <result column="product_id" property="productId" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="ext1" property="ext1" />
+        <result column="ext2" property="ext2" />
+        <result column="ext3" property="ext3" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_color, proudct_count, product_id, create_time, modify_time, ext1, ext2, ext3
+    </sql>
+
+</mapper>
